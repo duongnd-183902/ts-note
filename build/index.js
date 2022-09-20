@@ -1,0 +1,16 @@
+"use strict";
+class MyClass {
+    constructor() {
+        this.name = "MyClass";
+    }
+    getName() {
+        return this.name;
+    }
+}
+const c = new MyClass();
+const obj = {
+    name: "obj",
+    getName: c.getName,
+};
+// Prints "obj", not "MyClass"
+console.log(obj.getName());
